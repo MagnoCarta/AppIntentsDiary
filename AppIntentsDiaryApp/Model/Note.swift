@@ -7,7 +7,7 @@
 
 import SwiftData
 import Foundation
-
+import AppIntents
 
 struct Note: Codable, Hashable {
     var id: UUID = .init()

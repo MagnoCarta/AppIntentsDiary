@@ -45,15 +45,3 @@ class Diary {
     }
     
 }
-
-@MainActor
-class Database {
-    
-    static var shared: Database = .init()
-    
-    let container = try! ModelContainer(
-        for: Day.self,
-        configurations: .init(url: .documentsDirectory.appending(path: "Diary"))
-    )
-    var context: ModelContext { container.mainContext }
-}
