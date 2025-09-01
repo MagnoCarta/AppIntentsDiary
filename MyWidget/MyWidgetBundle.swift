@@ -66,6 +66,7 @@ struct NotesWidget: Widget {
     var body: some WidgetConfiguration {
         StaticConfiguration(kind: kind, provider: NotesProvider()) { entry in
             NotesWidgetEntryView(entry: entry)
+                .containerBackground(.fill.tertiary, for: .widget)
         }
         .configurationDisplayName("Notes")
         .description("Shows the latest note")
